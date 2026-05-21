@@ -70,6 +70,8 @@ Immutable infrastructure ensures environments are rebuilt from scratch instead o
 ### 18. How do you handle secrets rotation for applications running in Kubernetes, and why is it important?
 Secrets rotation involves updating and redeploying new secrets securely. It minimizes security risks from compromised credentials.
 
+Secrets rotation means periodically updating credentials like passwords, API keys, or certificates to reduce security risks if secrets are compromised. In Kubernetes, rotation can be manual or automated. In production, tools like HashiCorp Vault or AWS Secrets Manager are commonly used to automatically rotate and sync secrets with Kubernetes. After updating secrets, applications are reloaded or restarted using rolling updates to avoid downtime
+
 ### 19. Discuss the challenges and best practices for running stateful applications in Kubernetes, such as databases.
 Challenges include data persistence, backups, and scaling. Best practices involve using StatefulSets, persistent volumes, and scheduled snapshots.
 
